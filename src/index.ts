@@ -10,6 +10,9 @@ app.use(express.json());
 
 // Test route with validation
 app.get('/api/health', validate(healthCheckSchema), HealthHandler.check);
+app.get('/api/audio2text', validate(healthCheckSchema), HealthHandler.check);
+app.get('/api/text2audio', validate(healthCheckSchema), HealthHandler.check);
+app.get('/api/text2action', validate(healthCheckSchema), HealthHandler.check);
 
 // Start server
 app.listen(port, () => {
